@@ -184,7 +184,7 @@ return [
             'can'  => 'manage-blog',
         ],
 
-        ['header' => 'labels'],
+        ['header' => ''],
         [
             'text'       => 'Annuaire des associations',
             'icon_color' => 'red',
