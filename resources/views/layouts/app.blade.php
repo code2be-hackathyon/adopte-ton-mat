@@ -77,5 +77,6 @@
         </main>
     </div>
     <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+    @yield('js')
 </body>
 </html>

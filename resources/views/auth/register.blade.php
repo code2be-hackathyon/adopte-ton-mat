@@ -10,6 +10,34 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        <!------------------------------------------------------>
+                        <!--           Choix utilisateur ou association       -->
+                        <!------------------------------------------------------>
+                        <SELECT id="profile" name="Profil" size="1">
+                          <option value="Association">Association</option>
+                          <option value="Particulier">Particulier</option>
+                        </SELECT>
+                        <div id="association">
+                          Je suis une association.
+                          <p></p>
+                            <div class="form-group row">
+                                <label for="NomAssociation" class="col-md-4 col-form-label text-md-right">Nom de l'association</label>
+
+                                <div class="col-md-6">
+                                    <input id="NomAssociation" type="text" class="form-control @error('NomAssociation') is-invalid @enderror" name="NomAssociation" required autocomplete="new-password">
+
+                                    @error('NomAssociation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div id="particulier" style="display: none;">
+                            Je suis un particulier.
+                            <p></p>
+                        </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -63,9 +91,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+
                             </div>
                         </div>
                     </form>
@@ -74,4 +100,19 @@
         </div>
     </div>
 </div>
+@endsection
+@section('js')
+<script>
+    $(document).ready(function () {
+        $('#profile').change(function () {
+            if ($(this).val() === 'Association') {
+                $('#association').show();
+                $('#particulier').hide();
+            } else {
+                $('#association').hide();
+                $('#particulier').show();
+            }
+        });
+    });
+</script>
 @endsection
