@@ -139,6 +139,14 @@
                           </div>
                         </div> 
                         
+                    <div class="form-group row">
+                     <label for="name" class="col-md-4 col-form-label text-md-right">Description de l'association</label>
+                      <div class="col-md-6">
+                        <textarea name="DescriptionAssociation"
+		                   rows="10" cols="40">Qui aide votre association ? Que fait elle ?
+		                </textarea>
+                       </div>
+                    </div>
                         
 
                         <div class="form-group row mb-0">
