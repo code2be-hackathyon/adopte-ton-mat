@@ -7,4 +7,3 @@
 @stop
 
 @section('content')
-@stop
