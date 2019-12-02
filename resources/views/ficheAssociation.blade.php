@@ -31,6 +31,7 @@
                             </div>
                         </div>
 
+
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Nom du réferent</label>
 
@@ -129,8 +130,15 @@
                             </div>
                         </div>
 
-
-
+                        <!-- Ajout logo (à voir plus tard)
+                            
+                            <div class="form-group row">
+                          <div class="col-md-6">
+                           <p> Logo :<input type="file" name="profile_pic" accept=".jpg, .jpeg, .png"></p>
+                          </div>
+                        </div> 
+                        
+                        -->
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
