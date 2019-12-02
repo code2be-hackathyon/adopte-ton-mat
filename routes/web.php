@@ -24,7 +24,7 @@ Route::get('/home', 'CategorieController@index')->name('home');
 
 Route::get('/associations','AssociationController@index')->name('associations.index');
 
-Route::get('/materiel/{categorie}','MaterielController@details')->name('materiel.details');
+Route::get('/materiel/{category}','MaterielController@details')->name('materiel.details');
 
 Route::get('/maladie','MaladieController@index')->name('maladie.index');
 
