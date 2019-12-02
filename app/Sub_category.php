@@ -10,7 +10,11 @@ class sub_category extends Model
         'libelle', 'categorie_id', 'id'
     ];
 
+<<<<<<< HEAD:app/Sub_category.php
     public function Category(){
         return $this->belongsTo(Category::class);
     }
+=======
+
+>>>>>>> 9d6acba43a3b061e8cb1240ec8da11fdc1ada7ba:app/SousCategorie.php
 }
