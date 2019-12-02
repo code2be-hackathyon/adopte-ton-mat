@@ -13,4 +13,6 @@ class Association extends Model
     protected $hidden = [
         'login','mdp'
     ];
+
+
 }
