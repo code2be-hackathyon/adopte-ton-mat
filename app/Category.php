@@ -10,7 +10,7 @@ class Category extends Model
         'id','label'
     ];
 
-    protected $table = 'category';
+    protected $table = 'categories';
 
     public function sousCategories(){
         return $this->hasMany(Sub_category::class);
