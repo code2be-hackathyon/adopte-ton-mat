@@ -130,15 +130,16 @@
                             </div>
                         </div>
 
-                        <!-- Ajout logo (à voir plus tard)
+                        
                             
                             <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Logo de l'association</label>
                           <div class="col-md-6">
-                           <p> Logo :<input type="file" name="profile_pic" accept=".jpg, .jpeg, .png"></p>
+                           <input type="file" name="profile_pic" accept=".jpg, .jpeg, .png">
                           </div>
                         </div> 
                         
-                        -->
+                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
