@@ -5,15 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Fiche association</div>
+                
 
-                <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <!------------------------------------------------------>
                         <!--               Fiche association                  -->
                         <!------------------------------------------------------>
                         <div id="association">
+                        
+                <p class="card-header">Contact :</p>
                           
                           <p></p>
                             <div class="form-group row">
@@ -30,6 +31,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Nom du réferent</label>
@@ -128,9 +130,26 @@
                                 @enderror
                             </div>
                         </div>
-
-
-
+                        
+                        <p class="card-header">Présentation :</p>
+                        <p></p>
+                            
+                            <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Logo de l'association</label>
+                          <div class="col-md-6">
+                           <input type="file" name="profile_pic" accept=".jpg, .jpeg, .png">
+                          </div>
+                        </div> 
+                        
+                    <div class="form-group row">
+                     <label for="name" class="col-md-4 col-form-label text-md-right">Description de l'association</label>
+                      <div class="col-md-6">
+                        <textarea name="DescriptionAssociation"
+		                   rows="9" cols="40">Qui aide votre association ? Que fait elle ?
+		                </textarea>
+                       </div>
+                    </div>
+                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -138,6 +157,8 @@
                                     Valider
                                 </button>
                             </div>
+                            <p></p>
+                        
 
                             </div>
                         </div>

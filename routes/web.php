@@ -12,6 +12,10 @@
 */
 
 
+Route::get('/ficheAssociation', function () {
+    return view('ficheAssociation');
+});
+
 Auth::routes();
 
 Route::get('/', 'CategorieController@index')->name('home');
