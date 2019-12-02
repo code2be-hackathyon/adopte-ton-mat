@@ -13,11 +13,11 @@ class CategoriesSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            ['label'=> 'Communication'],
-            ['label'=>'Couchage/Confort'],
-            ['label'=>'Transferts'],
-            ['label'=>'Déplacement'],
-            ['label'=>'Hygiène']
+            ['id'=>'1','label'=> 'Communication'],
+            ['id'=>'2','label'=>'Couchage/Confort'],
+            ['id'=>'3','label'=>'Transferts'],
+            ['id'=>'4','label'=>'Déplacement'],
+            ['id'=>'5','label'=>'Hygiène']
         ]);
     }
 }
