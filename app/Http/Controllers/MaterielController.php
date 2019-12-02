@@ -13,13 +13,13 @@ class MaterielController extends Controller
     public static function details(Request $request)
     {
         $selectedCategoryID=$request['category'];
-        $materiels = Material::all()->all();
-        $echo = '';
-        foreach ($materiels as $materiel){
-            if( $materiel['sub_category_id'] == ;
-        }
-        var_dump($echo);
+        $materiels = Material::all();
 
+        foreach ($materiels as $materiel){
+            if( $materiel['sub_category_id'] == '');
+            $materiels[]=[$materiel];
+        }
+        return view('materiel.details',['materiels'=>$materiels->all()]);
 
 
 
