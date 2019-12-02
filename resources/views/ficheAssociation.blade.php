@@ -5,15 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Fiche association</div>
+                
 
-                <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <!------------------------------------------------------>
                         <!--               Fiche association                  -->
                         <!------------------------------------------------------>
                         <div id="association">
+                        
+                <p class="card-header">Contact :</p>
                           
                           <p></p>
                             <div class="form-group row">
@@ -129,8 +130,9 @@
                                 @enderror
                             </div>
                         </div>
-
                         
+                        <p class="card-header">Présentation :</p>
+                        <p></p>
                             
                             <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Logo de l'association</label>
@@ -143,7 +145,7 @@
                      <label for="name" class="col-md-4 col-form-label text-md-right">Description de l'association</label>
                       <div class="col-md-6">
                         <textarea name="DescriptionAssociation"
-		                   rows="10" cols="40">Qui aide votre association ? Que fait elle ?
+		                   rows="9" cols="40">Qui aide votre association ? Que fait elle ?
 		                </textarea>
                        </div>
                     </div>
@@ -155,6 +157,8 @@
                                     Valider
                                 </button>
                             </div>
+                            <p></p>
+                        
 
                             </div>
                         </div>
