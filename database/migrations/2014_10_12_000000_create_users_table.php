@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -21,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('city');
             $table->string('street');
-            $table->string('numStreet');
-            $table->string('postalCode');
+            $table->string('num_street');
+            $table->string('postal_code');
             $table->rememberToken();
             $table->timestamps();
         });

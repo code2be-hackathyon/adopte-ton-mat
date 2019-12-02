@@ -4,10 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Materiel extends Model
+class Material extends Model
 {
     protected $fillable = [
-        'libelle','reference','ficheTech','association_id'
+        'id','label','reference','tech_sheet','association_id'
     ];
+
+    public function association(){
+        return $this->belongsTo(Association::class);
+    }
 
 }

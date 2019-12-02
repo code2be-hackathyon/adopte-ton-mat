@@ -13,7 +13,13 @@ class OtherUsers extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('other_users', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('forename');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+        });
     }
 
     /**
@@ -23,6 +29,9 @@ class OtherUsers extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('other_users');
+        Schema::create('other_users', function (Blueprint $table) {
+            $table->dropForeign('other_users_users_id_foreign');
+        });
     }
 }
