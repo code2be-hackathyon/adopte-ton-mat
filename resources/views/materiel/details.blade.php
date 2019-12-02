@@ -12,8 +12,8 @@
             <!-- Widget: user widget style 1 -->
             <div class="card card-widget widget-user">
                 <!-- Add the bg color to the header using any of the bg-* classes -->
-{{--                <div class="widget-user-header text-white" style="background: url('../dist/img/photo1.png') center center;">--}}
-                    {{--<h5 class="widget-user-username text-center">{{$materiels->label}}</h5>--}}
+                <div class="widget-user-header text-white" style="background: url('../dist/img/index.png') center center;">
+
                 <h5 class="widget-user-username text-center">{{$materiel['0']['label']}}</h5>
                 </div>
                 <div class="card-footer">
@@ -21,9 +21,9 @@
                         <div class="col-sm-4 border-right">
                             <div class="description-block">
                                 {{--<h5 class="description-header">{{$materiels->label}}</h5>--}}
-                                <h5 class="description-header">dthrth</h5>
+                                <h5 class="description-header">{{$materiel['0']['label']}}</h5>
                                 {{--<span class="description-text">{{$materiels->reference}}</span>--}}
-                                <span class="description-text">rryj</span>
+                                <span class="description-text">{{$materiels['0']['reference']}}</span>
                             </div>
                             <!-- /.description-block -->
                         </div>
