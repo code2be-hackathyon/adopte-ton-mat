@@ -10,6 +10,7 @@ class Association extends Model
         'utilisateur_id','designation','nomReferent','prenomReferent','descriptif','mail','adresseVille','adresseRue','numRue','cp'
     ];
 
+    protected $table = 'ASSOCIATION';
     protected $hidden = [
         'login','mdp'
     ];

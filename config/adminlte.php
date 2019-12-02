@@ -188,12 +188,12 @@ return [
         [
             'text'       => 'Annuaire des associations',
             'icon_color' => 'red',
-            'url'  => '/accueil/association'
+            'url'  => '/association'
         ],
         [
             'text'       => 'Proposer un équipement',
             'icon_color' => 'yellow',
-            'url'  => '/accueil/addEquipement'
+            'url'  => '/materiel'
         ],
         [
             'text'    => 'Trouver mon Matériel',
@@ -201,23 +201,23 @@ return [
             'submenu' => [
                 [
                     'text' => 'Communcation',
-                    'url'  => '/Categorie/communication',
+                    'url'  => '/materiel/1',
                 ],
                 [
                     'text'    => 'couchage/Confort',
-                    'url'     => '/Categorie/confort',
+                    'url'     => '/materiel/2',
                 ],
                 [
                     'text' => 'Transferts',
-                    'url'  => '/Categorie/transfert',
+                    'url'  => '/materiel/3',
                 ],
                 [
                     'text' => 'Déplacement',
-                    'url'  => '/Categorie/deplacement',
+                    'url'  => '/materiel/4',
                 ],
                 [
                     'text' => 'Hygiène',
-                    'url'  => '/Categorie/hygiene',
+                    'url'  => '/materiel/5',
                 ],
             ],
         ],

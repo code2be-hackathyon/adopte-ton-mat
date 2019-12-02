@@ -20,7 +20,16 @@ Auth::routes();
 
 Route::get('/', 'CategorieController@index')->name('home');
 
-Route::get('/Categorie/{categorie}','CategorieController@details')->name('categorie.details');
+Route::get('/home', 'CategorieController@index')->name('home');
 
-//Route::get('/accueil/association','AssociationController@index')->name('Association.index');
-Route::get('/accueil/association','AssociationController@index')->name('Association.index');
+Route::get('/association','AssociationController@index')->name('association.index');
+
+Route::get('/materiel/{categorie}','MaterielController@details')->name('materiel.details');
+
+Route::get('/maladie','MaladieController@index')->name('maladie.index');
+
+Route::get('/materiel','MaterielController@index')->name('materiel.index');
+
+Route::get('/sous_categoire','SousCategorieController@index')->name('sousCategoire.index');
+
+

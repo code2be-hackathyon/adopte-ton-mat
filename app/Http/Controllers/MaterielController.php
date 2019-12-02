@@ -6,11 +6,14 @@ use App\Association;
 use App\Materiel;
 use Illuminate\Http\Request;
 
+
 class MaterielController extends Controller
 {
-    public static function index()
+    public static function details(Request $request)
     {
-        $materiels = Materiel::all();
-        return view('home',['materiels'=>$materiels]);
+        $selectedCategorie=$request['categorie'];
+//        $materiels = Materiel::find($selectedCategorie);
+//        return view('materiel.details',['materiels'=>$materiels]);
+        return view('materiel.details');
     }
 }
