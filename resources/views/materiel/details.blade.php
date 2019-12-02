@@ -33,7 +33,7 @@
                                 {{--<h5 class="description-header">{{$materiels->association_id}}</h5>--}}
                                 <h5 class="description-header">{{\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->designation}}</h5>
                                 {{--<span class="description-text">{{$associations ?? ''->mail}}</span>--}}
-                                <span class="description-text">{{$materiels['0']['email']}}</span>
+                                <span class="description-text">{{$materiel['1']->email}}</span>
                             </div>
                         </div>
                         <div class="col-sm-4 border-right">
