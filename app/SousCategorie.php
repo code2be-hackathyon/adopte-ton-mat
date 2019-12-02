@@ -9,4 +9,6 @@ class SousCategorie extends Model
     protected $fillable = [
         'libelle', 'categorie_id', 'id'
     ];
+
+
 }
