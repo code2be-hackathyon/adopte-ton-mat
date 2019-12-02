@@ -199,7 +199,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Communcation',
-                    'url'  => '#',
+                    'url'  => '/Categorie/communication',
                 ],
                 [
                     'text'    => 'couchage/Confort',

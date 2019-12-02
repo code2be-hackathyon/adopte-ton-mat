@@ -15,10 +15,14 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/ficheAssociation', function () {
-    return view('ficheAssociation');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/Categorie/communication','HomeController@index2')->name('test');
+
+Route::get('/Categorie/communication','HomeController@index2')->name('test');
+
+Route::get('/Categorie/communication','HomeController@index2')->name('test');
+
+Route::get('/Categorie/communication','HomeController@index2')->name('test');
