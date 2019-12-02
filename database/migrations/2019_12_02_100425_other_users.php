@@ -17,9 +17,17 @@ class OtherUsers extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('forename');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->index();
+
+        });
+        Schema::table('other_users',function (Blueprint $table){
             $table->foreign('user_id')->references('id')->on('users');
         });
+        Schema::table('materials',function (Blueprint $table){
+            $table->foreign('association_id')->references('id')->on('associations');
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories');
+        });
+
     }
 
     /**
