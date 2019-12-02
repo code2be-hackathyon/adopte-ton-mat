@@ -19,9 +19,16 @@ class Associations extends Migration
             $table->string('referent_name');
             $table->string('referent_forename');
             $table->string('description');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->index();
+        });
+
+        Schema::table('sub_categories',function (Blueprint $table){
+            $table->foreign('category_id')->references('id')->on('categories');
+        });
+        Schema::table('associations',function(Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
         });
+
     }
 
     /**

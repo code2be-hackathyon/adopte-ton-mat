@@ -18,13 +18,12 @@ class Materials extends Migration
             $table->string('label');
             $table->string('reference');
             $table->string('tech_sheet');
-            $table->bigInteger('association_id')->unsigned();
+            $table->bigInteger('association_id')->unsigned()->index();
+            $table->unsignedBigInteger('sub_category_id')->index();
 
         });
 
-        Schema::table('materials',function (Blueprint $table){
-            $table->foreign('association_id')->references('id')->on('associations');
-        });
+
     }
 
     /**
