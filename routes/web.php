@@ -11,18 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'CategorieController@index')->name('home');
 
-Route::get('/Categorie/communication','HomeController@index2')->name('test');
+Route::get('/Categorie/{categorie}','CategorieController@details')->name('categorie.details');
 
-Route::get('/Categorie/communication','HomeController@index2')->name('test');
-
-Route::get('/Categorie/communication','HomeController@index2')->name('test');
-
-Route::get('/Categorie/communication','HomeController@index2')->name('test');
+//Route::get('/accueil/association','AssociationController@index')->name('Association.index');
+Route::get('/accueil/association','AssociationController@index')->name('Association.index');
