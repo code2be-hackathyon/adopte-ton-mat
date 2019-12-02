@@ -15,4 +15,6 @@ class CategorieController extends Controller
         return view('categorie.details',['categories'=>$categories]);
     }
 
+
+
 }
