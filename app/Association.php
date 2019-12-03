@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Association extends Model
 {
@@ -18,6 +19,10 @@ class Association extends Model
     public function materials()
     {
         return $this->hasMany(Material::class);
+    }
+
+    public function getUserById(){
+        DB::table('users')->find($this->user_id);
     }
 
 
