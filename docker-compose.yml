@@ -5,8 +5,8 @@ services:
     image: chialab/php:7.2-apache
     working_dir: /app
     volumes:
-      - ./:/app
-      - ./virtualhost.conf:/etc/apache/sites-enabled/laravel.conf
+      - ./:/var/www/html
+      - ./virtualhost.conf:/etc/apache2/sites-enabled/laravel.conf
     ports:
       - 127.0.0.1:8000:80
     restart: unless-stopped
