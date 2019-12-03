@@ -6,9 +6,7 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-    configs:
-      - source: virtualhost
-        target: /etc/apache/sites-enabled/laravel.conf
+      - ./virtualhost.conf:/etc/apache/sites-enabled/laravel.conf
     ports:
       - 127.0.0.1:8000:80
     restart: unless-stopped
@@ -24,7 +22,3 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=hky
-
-configs:
-  virtualhost:
-    file: ./virtualhost.conf
