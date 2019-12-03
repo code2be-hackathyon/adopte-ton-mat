@@ -17,7 +17,7 @@ class Materials extends Migration
             $table->bigIncrements('id');
             $table->string('label');
             $table->string('reference');
-            $table->string('tech_sheet');
+            $table->longText('tech_sheet');
             $table->bigInteger('association_id')->unsigned()->index();
             $table->unsignedBigInteger('sub_category_id')->index();
 

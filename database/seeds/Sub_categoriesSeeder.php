@@ -12,12 +12,13 @@ class Sub_categoriesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('sub-categories')->insert([
+        DB::table('sub_categories')->insert([
             ['label'=>'fauteul roulant','category_id'=>4],
             ['label'=>'lit','category_id'=>2],
-            ['label'=>'detecteur de mouvement oculaire','category_id'=>1],
             ['label'=>'lève personne','category_id'=>3],
-            ['label'=>'douche','category_id'=>3]
+            ['label'=>'douche','category_id'=>3],
+            ['label'=>'J\'utilise mes yeux','category_id'=>1],
+            ['label'=>'J\'utilise mes mains','category_id'=>1],
         ]);
     }
 }
