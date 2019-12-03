@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'AdopteTonMat')
 
 @section('content')
 <div class="container">
