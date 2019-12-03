@@ -18,7 +18,7 @@ class MaterielController extends Controller
         $materiels = Material::all();
         $materielInSelectedCategory[]=[];
         foreach ($materiels as $materiel){
-            $sub_category = DB::table('sub_categories')->find($materiel['sub_category_id'])->get();
+            $sub_category = DB::table('sub_categories')->find($materiel['sub_category_id']);
             //$sub_category = DB::table('sub_categories')->find($materiel['sub_category_id']);
             $association = DB::table('associations')->find($materiel['association_id']);
             $category = DB::table('categories')->find($sub_category->category_id);
@@ -31,7 +31,13 @@ class MaterielController extends Controller
 //            var_dump($item[1]);
 
         }
-        return view('materiel.details',['materiels'=>$materielInSelectedCategory]);
+
+//        $materiels = Material::sortByCategory($request['category']);
+//
+//        var_dump($request['category']);
+//        var_dump($materiels);
+
+        return view('materiel.details',['materiels'=>$materiels]);
 
 
 

@@ -24,10 +24,10 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>nom Association </td>
-                    <td>nom référent</td>
-                    <td>description</td>
-                    <td>email</td>
+                    <td>{{$associations['0']->designation}} </td>
+                    <td>{{$associations['0']->referent_name}}</td>
+                    <td>{{$associations['0']->description}}</td>
+                    <td>{{ \Illuminate\Support\Facades\DB::table('users')->find($associations['0']['user_id'])->email}}</td>
                 </tr>
                 </tbody>
             </table>

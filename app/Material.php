@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Material extends Model
 {
@@ -19,6 +20,12 @@ class Material extends Model
         return $this->belongsTo(Sub_category::class);
     }
 
+    public static function sortByCategory($category_id){
+        return DB::table('materials')->where('id',
+            'in',
+            DB::table('sub_categories')->where('category_id','=',$category_id)->get('id'))->toSql();
+
+    }
 
 
 }
