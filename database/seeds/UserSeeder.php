@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            ['name'=>'userTest','email'=>'test@test.com','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','numStreet'=>'123','postal_code'=>'85220','remember_token'=>'123456789']
+            ['email'=>'contact@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>'123456789']
 
         ]);
     }
