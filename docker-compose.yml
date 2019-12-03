@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app:
     image: chialab/php:7.2-apache
-    working_dir: /app
+    working_dir: /var/www/html
     volumes:
       - ./:/var/www/html
       - ./virtualhost.conf:/etc/apache2/sites-enabled/laravel.conf
