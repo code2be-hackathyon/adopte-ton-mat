@@ -18,11 +18,19 @@ class MaterielController extends Controller
         $materielInSelectedCategory[]=[];
         foreach ($materiels as $materiel){
             $sub_category = DB::table('sub_categories')->find($materiel['sub_category_id'])->get();
+            $sub_category = DB::table('sub_categories')->find($materiel['sub_category_id']);
+            $association = DB::table('associations')->find($materiel['association_id']);
             $category = DB::table('categories')->find($sub_category->category_id);
             if( $category->id == $selectedCategoryID){
-                $materielInSelectedCategory=[$materiel];}
+                $materielInSelectedCategory=[$materiel,$association];}
         }
-        return view('materiel.details',['materiels'=>$materielInSelectedCategory,'associations']);
+        var_dump($materielInSelectedCategory[1]->designation);
+        foreach ($materielInSelectedCategory as $item){
+            var_dump('-------------------');
+            var_dump($item[1]);
+
+        }
+        return view('materiel.details',['materiels'=>$materielInSelectedCategory]);
 
 
 
