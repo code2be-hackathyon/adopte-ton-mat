@@ -17,7 +17,7 @@ class MaterielController extends Controller
         $materiels = Material::all();
         $materielInSelectedCategory[]=[];
         foreach ($materiels as $materiel){
-            $sub_category = DB::table('sub_categories')->find($materiel['sub_category_id']);
+            $sub_category = DB::table('sub_categories')->find($materiel['sub_category_id'])->get();
             $category = DB::table('categories')->find($sub_category->category_id);
             if( $category->id == $selectedCategoryID){
                 $materielInSelectedCategory=[$materiel];}
