@@ -19,4 +19,6 @@ class Material extends Model
         return $this->belongsTo(Sub_category::class);
     }
 
+
+
 }

@@ -22,7 +22,7 @@ Route::get('/', 'CategorieController@index')->name('home');
 
 Route::get('/home', 'CategorieController@index')->name('home');
 
-Route::get('/associations','AssociationController@index')->name('associations.index');
+Route::get('/association','AssociationController@index')->name('associations.index');
 
 Route::get('/materiel/{category}','MaterielController@details')->name('materiel.details');
 
@@ -31,5 +31,7 @@ Route::get('/maladie','MaladieController@index')->name('maladie.index');
 Route::get('/materiel','MaterielController@index')->name('materiel.index');
 
 Route::get('/sous_categoire','SousCategorieController@index')->name('sousCategoire.index');
+
+Route::get('/AddMateriel','MaterielController@add')->name('materiel.add');
 
 
