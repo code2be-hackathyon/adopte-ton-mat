@@ -11,8 +11,7 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                @if($categorie == null)
-                    @foreach($errors as $categorie)
+                    @foreach($categories as $categorie)
                         <div class="col-lg-3 col-6">
                             <!-- small box -->
                             <div class="small-box bg-info">
@@ -24,11 +23,10 @@
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
                                 </div>
-                                <a href="{{ route('category.details', $categorie) }}" class="small-box-footer">Informations Supplémentaires <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="{{ route('materiel.details', $categorie) }}" class="small-box-footer">Informations Supplémentaires <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     @endforeach
-                @endif
                 <!-- ./col -->
             </div><!-- /.container-fluid -->
     </section>
