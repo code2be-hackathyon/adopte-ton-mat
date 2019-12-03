@@ -12,13 +12,13 @@
             <!-- Small boxes (Stat box) -->
             <div class="row">
                     @foreach($categories as $categorie)
-                        <div class="col-lg-3 col-6">
+                        <div class="col-lg-6 col-6">
                             <!-- small box -->
                             <div class="small-box bg-info">
                                 <div class="inner">
+                                    <center>
                                     <h3>{{$categorie->label}}</h3>
-
-    {{--                                <p>{{ count($categorie->sousCategories) }}</p>--}}
+                                    </center>
                                 </div>
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
