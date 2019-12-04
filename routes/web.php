@@ -23,7 +23,6 @@ Route::get('/', 'CategorieController@index')->name('home');
 Route::get('/home', 'CategorieController@index')->name('home');
 
 Route::get('/association','AssociationController@index')->name('associations.index');
-Route::get('/associations','AssociationController@getListOf')->name('associations.liste');
 
 Route::get('/materiel/{category}','MaterielController@details')->name('materiel.details');
 
