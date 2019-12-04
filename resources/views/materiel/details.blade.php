@@ -50,7 +50,7 @@
                                         <h5 class="description-header">Nom de l'association </h5>
                                         <span class="description-text">{{\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->designation}}</span>
                                         <h5 class="description-header">Email de l'association </h5>
-                                        <span class="description-text">{{\Illuminate\Support\Facades\DB::table('users')->find(\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->user_id)->email}}</span>
+                                        <span class="description-text"><a href="mailto:{{\Illuminate\Support\Facades\DB::table('users')->find(\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->user_id)->email}}">{{\Illuminate\Support\Facades\DB::table('users')->find(\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->user_id)->email}}</a></span>
                                     </div>
                                 </div>
 

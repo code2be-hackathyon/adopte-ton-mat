@@ -16,8 +16,9 @@
             <table class="table table-striped table-valign-middle">
                 <thead>
                 <tr>
-                    <th>Nom de la association</th>
-                    <th>Nom du référent</th>
+                    <th>Nom de l'association</th>
+                    <th>Code Postal</th>
+                    <th>Référent</th>
                     <th>Description</th>
                     <th>Email</th>
                 </tr>
@@ -26,9 +27,10 @@
                 @foreach($associations as $association)
                 <tr>
                     <td>{{$association->designation}} </td>
-                    <td>{{$association->referent_name}}</td>
+                    <td>{{\Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->postal_code}}</td>
+                    <td>{{$association->referent_forename.' '.$association->referent_name}}</td>
                     <td>{{$association->description}}</td>
-                    <td>{{ \Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->email}}</td>
+                    <td><a href="mailto:{{ \Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->email}}">{{ \Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->email}}</a></td>
                 </tr>
                     @endforeach
                 </tbody>
