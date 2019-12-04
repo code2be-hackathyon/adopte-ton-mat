@@ -16,9 +16,11 @@
 
 @section('content')
 
-    @if(!empty($materiels))
 
     @foreach($materiels as $materiel)
+        @if(\Illuminate\Support\Facades\DB::table('categories')->find(
+    \Illuminate\Support\Facades\DB::table('sub_categories')->find(
+        $materiel->sub_category_id)->category_id)->id == request('category'))@php($i = 0)
         <section class="content">
             <div class="align-content-lg-center">
 
@@ -57,10 +59,16 @@
                     </div>
                     <!-- /.row -->
                 </div>
+            </div>
             <!-- /.widget-user -->
         </section>
+        @else
+           @php($i = 1)
+        @endif
     @endforeach
-    @else
+    @if($i == 1)
         <div class="text-center"><p>Il n'y a pas de materiel disponible dans cette catégorie</p></div>
     @endif
+
+
 @stop

@@ -29,6 +29,17 @@ class MaterialsSeeder extends Seeder
                 'reference'=>Str::random(10),
                 'tech_sheet'=>'Démarrage instantané pour une communication spontanée. Interface conviviale accessible au doigt ou par contacteur. Une ergonomie dédiée à la perte d\'autonomie. Autoadaptation du volume sonore. Mise à jour automatique et à distance. Mobile et autonome, ou connectée à un ordinateur. Assistance technique assurée.',
                 'association_id'=>1,'sub_category'=>6],
+            ['label'=>' GO CHAIR',
+                'reference'=>Str::random(10),
+                'tech_sheet'=>'Modèle : GO CHAIR
+Marque : ICARE JMB
+Type : Electrique
+Catégorie : Fauteuils électriques d\'intérieur
+Résumé : Petit fauteuil électrique d\'intérieur, démontable et
+transportable; il est intéressant par sa prise en charge
+intégrale, son faible encombrement et sa transportabilité
+(élément le plus lourd 17 kg).',
+'association_id'=>3,'sub_category'=>1],
         ]);
     }
 }
