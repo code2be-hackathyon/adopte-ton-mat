@@ -27,6 +27,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Builder::defaultStringLength(191);
+        if(config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
 //        if(env('REDIRECT_HTTPS')) {
 //            $this->app['request']->server->set('HTTPS', true);
 //        }
