@@ -29,7 +29,7 @@
                         <!-- Add the bg color to the header using any of the bg-* classes -->
                         <center>
                         <div class=conteneur>
-                            <img src=../img/index.png alt=Image />
+                            <img src=../img/{{request('category')}}/index.png alt=Image />
                         </div>
                         </center>
 
