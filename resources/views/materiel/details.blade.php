@@ -17,12 +17,12 @@
             <!-- Widget: user widget style 1 -->
             <div class="card card-widget widget-user">
                 <!-- Add the bg color to the header using any of the bg-* classes -->
-                <div class="widget-user-header text-white" style="background: url('../img/index.png') center center;">
+                <div class="widget-user-header " style="background: url('../img/index.png') center;">
 
                 </div>
                 <div class="card-footer">
                     <div class="row">
-                        <div class="col-sm-4 border-right">
+                        <div class="col-sm-6 border-right">
                             <div class="description-block">
                                 <h5 class="description-header">{{$materiel->label}}</h5>
                                 <span class="description-text">{{$materiel->reference}}</span>
@@ -30,7 +30,7 @@
                             <!-- /.description-block -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-sm-4 border-right">
+                        <div class="col-sm-6 ">
                             <div class="description-block">
                                 <h5 class="description-header">{{\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->designation}}</h5>
                                 <span class="description-text">{{\Illuminate\Support\Facades\DB::table('users')->find(\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->user_id)->email}}</span>
