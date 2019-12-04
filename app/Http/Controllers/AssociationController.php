@@ -14,4 +14,10 @@ class AssociationController extends Controller
         $associations = Association::all();
         return view('accueil.associations',['associations'=>$associations]);
     }
+
+    public function getListOf()
+    {
+        $countries = Association::select(['id', 'designation', 'referent_name', 'referent_forename', 'description','user_id']);
+        return Datatables::of($countries)->make(true);
+    }
 }
