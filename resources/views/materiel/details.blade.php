@@ -26,7 +26,7 @@
             <div class="align-content-lg-center">
 
                     <!-- Widget: user widget style 1 -->
-                    <div class="card card-widget widget-user">
+                    <div class="card card-widget widget-user datatable">
                         <!-- Add the bg color to the header using any of the bg-* classes -->
                         <center>
                         <div class=conteneur>
@@ -73,3 +73,13 @@
 
 
 @stop
+@section('js')
+    @parent
+    <script>
+        $('.datatable').dataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/French.json"
+            }
+        });
+    </script>
+@endsection
