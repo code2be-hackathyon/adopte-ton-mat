@@ -205,7 +205,7 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Communcation',
+                    'text' => 'Communication',
                     'url'  => '/categorie/1',
                 ],
                 [
