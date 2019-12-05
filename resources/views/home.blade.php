@@ -23,7 +23,7 @@
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
                                 </div>
-                                <a href="{{ route('materiel.details', $categorie) }}" class="small-box-footer">Informations Supplémentaires <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="{{ route('sousCategorie.getThisByCategoryId', $categorie) }}" class="small-box-footer">Informations Supplémentaires <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     @endforeach

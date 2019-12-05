@@ -30,7 +30,7 @@
                         <!-- Add the bg color to the header using any of the bg-* classes -->
                         <center>
                         <div class=conteneur>
-                            <img src="../img/{{request('category')}}/index.png"  alt="error 404"/>
+                            <img src="{{asset('img/'.request('category').'/index.png')}} " alt="error 404"/>
                         </div>
                         </center>
 
