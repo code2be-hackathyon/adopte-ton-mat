@@ -16,6 +16,9 @@ Route::get('/ficheAssociation', function () {
     return view('ficheAssociation');
 });
 Route::get('/ajoutMateriel', function () {
+    if (! auth()->check()) {
+        return redirect('/login');
+    }
     return view('materiel/ajoutMateriel');
 });
 Auth::routes();
