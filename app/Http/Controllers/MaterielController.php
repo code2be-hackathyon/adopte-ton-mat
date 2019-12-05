@@ -28,7 +28,6 @@ class MaterielController extends Controller
     {
         $subCategoryId = $request['subCategory'];
         $materiels = Material::all()->where('sub_category_id','=',$subCategoryId);
-
         return view('materiel.details',['materiels'=>$materiels]);
     }
 }
