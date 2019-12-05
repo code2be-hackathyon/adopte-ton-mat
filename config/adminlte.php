@@ -206,22 +206,27 @@ return [
             'submenu' => [
                 [
                     'text' => 'Communication',
+                    'icon' => 'fas fa-microphone',
                     'url'  => '/categorie/1',
                 ],
                 [
                     'text'    => 'couchage/Confort',
+                    'icon'    => 'fas fa-bed',
                     'url'     => '/categorie/2',
                 ],
                 [
                     'text' => 'Transferts',
+                    'icon' => 'fas fa-truck',
                     'url'  => '/categorie/3',
                 ],
                 [
                     'text' => 'Déplacement',
+                    'icon' => 'fas fa-wheelchair',
                     'url'  => '/categorie/4',
                 ],
                 [
                     'text' => 'Hygiène',
+                    'icon' => 'fas fa-shower',
                     'url'  => '/categorie/5',
                 ],
             ],
