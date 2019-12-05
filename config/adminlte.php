@@ -191,23 +191,23 @@ return [
             'submenu' => [
                 [
                     'text' => 'Communcation',
-                    'url'  => '/materiel/1',
+                    'url'  => '/categorie/1',
                 ],
                 [
                     'text'    => 'couchage/Confort',
-                    'url'     => '/materiel/2',
+                    'url'     => '/categorie/2',
                 ],
                 [
                     'text' => 'Transferts',
-                    'url'  => '/materiel/3',
+                    'url'  => '/categorie/3',
                 ],
                 [
                     'text' => 'Déplacement',
-                    'url'  => '/materiel/4',
+                    'url'  => '/categorie/4',
                 ],
                 [
                     'text' => 'Hygiène',
-                    'url'  => '/materiel/5',
+                    'url'  => '/categorie/5',
                 ],
             ],
         ],

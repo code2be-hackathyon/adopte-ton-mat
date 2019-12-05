@@ -18,9 +18,9 @@
 
 
     @foreach($materiels as $materiel)
-        @if(\Illuminate\Support\Facades\DB::table('categories')->find(
-    \Illuminate\Support\Facades\DB::table('sub_categories')->find(
-        $materiel->sub_category_id)->category_id)->id == request('category'))@php($i = 0)
+{{--        @if(\Illuminate\Support\Facades\DB::table('categories')->find(--}}
+{{--    \Illuminate\Support\Facades\DB::table('sub_categories')->find(--}}
+{{--        $materiel->sub_category_id)->category_id)->id == request('category'))@php($i = 0)--}}
         <section class="content">
             <div class="align-content-lg-center">
 
@@ -29,7 +29,7 @@
                         <!-- Add the bg color to the header using any of the bg-* classes -->
                         <center>
                         <div class=conteneur>
-                            <img src=../img/{{request('category')}}/index.png alt=Image />
+                            <img src=../img/{{request('category')}}/index.png   alt="."/>
                         </div>
                         </center>
 
@@ -62,13 +62,13 @@
             </div>
             <!-- /.widget-user -->
         </section>
-        @else
-           @php($i = 1)
-        @endif
+{{--        @else--}}
+{{--           @php($i = 1)--}}
+{{--        @endif--}}
     @endforeach
-    @if($i == 1)
-        <div class="text-center"><p>Il n'y a pas de materiel disponible dans cette catégorie</p></div>
-    @endif
+{{--    @if($i == 1)--}}
+{{--        <div class="text-center"><p>Il n'y a pas de materiel disponible dans cette catégorie</p></div>--}}
+{{--    @endif--}}
 
 
 @stop

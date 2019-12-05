@@ -34,4 +34,8 @@ Route::get('/sous_categoire','SousCategorieController@index')->name('sousCategoi
 
 Route::get('/AddMateriel','MaterielController@add')->name('materiel.add');
 
+Route::get('/categorie/{category}','SousCategorieController@getThisByCategoryId')->name('sousCategorie.getThisByCategoryId');
+
+Route::get('/categorie/{category}/sousCategorie/{subCategory}','MaterielController@getThisBySubCategoryId')->name('materiel.getThisBySubCategoryId');
+
 
