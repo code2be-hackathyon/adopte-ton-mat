@@ -55,8 +55,12 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">Catégorie de l'équipement</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="email" autofocus>
-
+{{--                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="email" autofocus>--}}
+                                <select>
+                                    @foreach(\App\Sub_category::all() as $sub_category)
+                                        <option value="{{$sub_category->id}}">{{$sub_category->label}}</option>
+                                        @endforeach
+                                </select>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
