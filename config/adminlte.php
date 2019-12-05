@@ -177,27 +177,27 @@ return [
 
         [
             'text' => 'Connexion',
-            'icon_color' => 'green',
+            'icon' => 'fas fa-sign-in-alt',
             'url'  => '/login',
             'topnav' => true,
             'right'=>true,
         ],
         [
             'text' => 'Inscription',
-            'icon_color' => 'blue',
+            'icon' => '',
             'url'  => '/register',
             'topnav' => true,
         ],
         ['header' => ''],
 
         [
-            'text'       => 'Annuaire des associations',
-            'icon_color' => 'red',
+            'text' => 'Annuaire des associations',
+            'icon' => 'far fa-address-book',
             'url'  => '/association'
         ],
         [
-            'text'       => 'Proposer un équipement',
-            'icon_color' => 'yellow',
+            'text' => 'Proposer un équipement',
+            'icon' => 'fas fa-plus',
             'url'  => '/ajoutMateriel'
         ],
         [
