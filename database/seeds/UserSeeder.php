@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
         ]);
         for ($i = 2; $i <= 21; $i++) {
             DB::table('users')->insert([
-                ['email' => Str::random(5) . '@test.fr', 'password' => 'pwtest', 'city' => 'La Roche sur Yon', 'street' => 'Boulevard Louis Blanc', 'num_street' => '123', 'postal_code' =>  random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9).'0', 'remember_token' => random_int(0, 200)]
+                ['email' => Str::random(5) . '@gmail.fr', 'password' => 'pwtest', 'city' => 'La Roche sur Yon', 'street' => 'Boulevard Louis Blanc', 'num_street' => '123', 'postal_code' =>  random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9).'0', 'remember_token' => random_int(0, 200)]
             ]);
         }
     }

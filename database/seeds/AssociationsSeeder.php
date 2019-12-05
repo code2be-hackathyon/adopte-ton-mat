@@ -14,13 +14,24 @@ class AssociationsSeeder extends Seeder
     public function run()
     {
         DB::table('associations')->insert([
-            ['designation' => 'handiSoutient', 'description' => 'pret de materiel pour handicaper', 'referent_name' => 'Doe', 'referent_forename' => 'John', 'user_id' => 1],
+            ['designation' => 'handiSoutien', 'description' => 'prêt de materiels pour personnes a mobilité reduite', 'referent_name' => 'Doe', 'referent_forename' => 'John', 'user_id' => 1],
         ]);
 
+        $faker = Faker\Factory::create('fr_FR');
         for ($i = 2; $i <= 20; $i++) {
             DB::table('associations')->insert([
-                ['designation' => Str::random(5), 'description' => Str::random(16), 'referent_name' => 'Doe', 'referent_forename' => 'John', 'user_id' => $i],
+                ['designation' => $faker->company, 'description' => $faker->paragraph('1'), 'referent_name' => 'Doe', 'referent_forename' => 'John', 'user_id' => $i],
             ]);
         }
+
+//        for($i = 2; $i<=20;$i++){
+//            $association = new \App\Association();
+//            $association->designation = $faker->company;
+//            $association->description = $faker->paragraph;
+//            $association->referent_name = $faker->name;
+//            $association->referent_forename = $faker->lastName;
+//            $association->user_id = $i;
+//            $association->save();
+//        }
     }
 }
