@@ -7,40 +7,40 @@
 @stop
 
 @section('content')
-
-    <div class="card">
-        <div class="card-header border-0">
-            <h3 class="card-title">Associations</h3>
-        </div>
-        <div class="card-body p-0">
-            <table class="table table-striped table-valign-middle">
-                <thead>
-                <tr>
-                    <th>Nom de l'association</th>
-                    <th>Code Postal</th>
-                    <th>Référent</th>
-                    <th>Description</th>
-                    <th>Email</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($associations as $association)
-                <tr>
-                    <td>{{$association->designation}} </td>
-                    <td>{{\Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->postal_code}}</td>
-                    <td>{{$association->referent_forename.' '.$association->referent_name}}</td>
-                    <td>{{$association->description}}</td>
-                    <td><a href="mailto:{{ \Illuminate\Support\Facades\DB::table('users')
-                    ->find($association['user_id'])->email}}">
-                            {{ \Illuminate\Support\Facades\DB::table('users')
-                    ->find($association['user_id'])->email}}</a></td>
-                </tr>
+<div class="content">
+    <div class="row-cols-2">
+            <div class="card-header">
+                <h3 class="card-title">Associations</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped datatable">
+                    <thead>
+                    <tr>
+                        <th>Nom de l'association</th>
+                        <th>Code Postal</th>
+                        <th>Référent</th>
+                        <th>Description</th>
+                        <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($associations as $association)
+                        <tr>
+                            <td>{{$association->designation}} </td>
+                            <td>{{\Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->postal_code}}</td>
+                            <td>{{$association->referent_forename.' '.$association->referent_name}}</td>
+                            <td>{{$association->description}}</td>
+                            <td><a href="mailto:{{ \Illuminate\Support\Facades\DB::table('users')
+                            ->find($association['user_id'])->email}}">
+                                    {{ \Illuminate\Support\Facades\DB::table('users')
+                            ->find($association['user_id'])->email}}</a></td>
+                        </tr>
                     @endforeach
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-
+</div>
     <!-- /.card -->
 
     {{--    <div class="row">--}}
@@ -78,3 +78,14 @@
 {{--    </div>--}}
 
 @stop
+
+@section('js')
+    @parent
+    <script>
+        $('.datatable').dataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/French.json"
+            }
+        });
+    </script>
+@endsection
