@@ -26,7 +26,7 @@
                                 <label for="NomAssociation" class="col-md-4 col-form-label text-md-right">Nom de l'association</label>
 
                                 <div class="col-md-6">
-                                    <input id="NomAssociation" type="text" class="form-control @error('NomAssociation') is-invalid @enderror" name="NomAssociation" required autocomplete="new-password">
+                                    <input id="NomAssociation" type="text" class="form-control @error('NomAssociation') is-invalid @enderror" name="NomAssociation" >
 
                                     @error('NomAssociation')
                                         <span class="invalid-feedback" role="alert">
@@ -34,6 +34,55 @@
                                         </span>
                                     @enderror
                                 </div>
+
+
+                            </div>
+                            <p></p>
+                            <div class="form-group row">
+                                <label for="referentName" class="col-md-4 col-form-label text-md-right">Nom du référent</label>
+
+                                <div class="col-md-6">
+                                    <input id="referentName" type="text" class="form-control @error('referentName') is-invalid @enderror" name="referentName" >
+
+                                    @error('referentName')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+
+                            </div>
+                            <p></p>
+                            <div class="form-group row">
+                                <label for="referentForename" class="col-md-4 col-form-label text-md-right">Prénom du référent</label>
+
+                                <div class="col-md-6">
+                                    <input id="referentForename" type="text" class="form-control @error('NomAssociation') is-invalid @enderror" name="referentForename" required autocomplete="new-password">
+
+                                    @error('referentForename')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                            </div>
+                            <p></p>
+                            <div class="form-group row">
+                                <label for="description" class="col-md-4 col-form-label text-md-right">Description brève</label>
+
+                                <div class="col-md-6">
+                                    <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" >
+
+                                    @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+
                             </div>
                         </div>
                         <div id="particulier" style="display: none;">
@@ -69,6 +118,35 @@
                             </div>
                         </div>
 
+                            <div class="form-group row">
+                                <label for="city" class="col-md-4 col-form-label text-md-right">Ville</label>
+
+                                <div class="col-md-6">
+                                    <input id="city" type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city">
+
+                                    @error('city')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="postalCode" class="col-md-4 col-form-label text-md-right">Code Postal</label>
+
+                                <div class="col-md-6">
+                                    <input id="postalCode" type="text" class="form-control @error('postalCode') is-invalid @enderror" name="postalCode" value="{{ old('postalCode') }}" required autocomplete="postalCode">
+
+                                    @error('postalCode')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">Mot de passe</label>
 
@@ -84,7 +162,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirmé le mot de passe</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirmer le mot de passe</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">

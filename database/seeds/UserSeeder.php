@@ -14,13 +14,15 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            ['email'=>'contact@gmail.com','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85000','remember_token'=>random_int(0,200)],
+            ['email'=>'contact@gmail.com','password'=>'pwtest','city'=>'La Roche sur Yon','postal_code'=>'85000','remember_token'=>random_int(0,200)],
 
 
         ]);
+
+        $faker = Faker\Factory::create('fr_FR');
         for ($i = 2; $i <= 21; $i++) {
             DB::table('users')->insert([
-                ['email' => Str::random(5) . '@gmail.fr', 'password' => 'pwtest', 'city' => 'La Roche sur Yon', 'street' => 'Boulevard Louis Blanc', 'num_street' => '123', 'postal_code' =>  random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9).'0', 'remember_token' => random_int(0, 200)]
+                ['email' => $faker->companyEmail, 'password' => 'pwtest', 'city' => $faker->city, 'postal_code' =>  random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9).'0', 'remember_token' => random_int(0, 200)]
             ]);
         }
     }
