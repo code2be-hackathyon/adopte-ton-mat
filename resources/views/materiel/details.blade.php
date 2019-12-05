@@ -18,6 +18,7 @@
 
 
     @foreach($materiels as $materiel)
+
 {{--        @if(\Illuminate\Support\Facades\DB::table('categories')->find(--}}
 {{--    \Illuminate\Support\Facades\DB::table('sub_categories')->find(--}}
 {{--        $materiel->sub_category_id)->category_id)->id == request('category'))@php($i = 0)--}}
@@ -29,7 +30,7 @@
                         <!-- Add the bg color to the header using any of the bg-* classes -->
                         <center>
                         <div class=conteneur>
-                            <img src=../img/{{request('category')}}/index.png   alt="."/>
+                            <img src="../img/{{request('category')}}/index.png"  alt="error 404"/>
                         </div>
                         </center>
 
@@ -48,9 +49,9 @@
                                 <div class="col-sm-6">
                                     <div class="description-block">
                                         <h5 class="description-header">Nom de l'association </h5>
-                                        <span class="description-text">{{\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->designation}}</span>
+                                        <span class="description-text">{{\Illuminate\Support\Facades\DB::table('associations')->find($materiel['association_id'])->designation}}</span>
                                         <h5 class="description-header">Email de l'association </h5>
-                                        <span class="description-text"><a href="mailto:{{\Illuminate\Support\Facades\DB::table('users')->find(\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->user_id)->email}}">{{\Illuminate\Support\Facades\DB::table('users')->find(\Illuminate\Support\Facades\DB::table('associations')->find($materiels['0']['association_id'])->user_id)->email}}</a></span>
+                                        <span class="description-text"><a href="mailto:{{\Illuminate\Support\Facades\DB::table('users')->find(\Illuminate\Support\Facades\DB::table('associations')->find($materiel['association_id'])->user_id)->email}}">{{\Illuminate\Support\Facades\DB::table('users')->find(\Illuminate\Support\Facades\DB::table('associations')->find($materiel['association_id'])->user_id)->email}}</a></span>
                                     </div>
                                 </div>
 

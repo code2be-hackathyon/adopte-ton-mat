@@ -38,4 +38,3 @@ Route::get('/categorie/{category}','SousCategorieController@getThisByCategoryId'
 
 Route::get('/categorie/{category}/sousCategorie/{subCategory}','MaterielController@getThisBySubCategoryId')->name('materiel.getThisBySubCategoryId');
 
-

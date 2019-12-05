@@ -32,14 +32,25 @@ class MaterialsSeeder extends Seeder
             ['label'=>' GO CHAIR',
                 'reference'=>Str::random(10),
                 'tech_sheet'=>'Modèle : GO CHAIR
-Marque : ICARE JMB
-Type : Electrique
-Catégorie : Fauteuils électriques d\'intérieur
-Résumé : Petit fauteuil électrique d\'intérieur, démontable et
-transportable; il est intéressant par sa prise en charge
-intégrale, son faible encombrement et sa transportabilité
-(élément le plus lourd 17 kg).',
-'association_id'=>3,'sub_category'=>1],
+                Marque : ICARE JMB
+                Type : Electrique
+                Catégorie : Fauteuils électriques d\'intérieur
+                Résumé : Petit fauteuil électrique d\'intérieur, démontable et
+                transportable; il est intéressant par sa prise en charge
+                intégrale, son faible encombrement et sa transportabilité
+                (élément le plus lourd 17 kg).',
+                'association_id'=>3,'sub_category'=>1],
+            ['label'=>' GO CHAIR',
+                                'reference'=>Str::random(10),
+                                'tech_sheet'=>'Modèle : GO CHAIR
+                Marque : ICARE JMB
+                Type : Electrique
+                Catégorie : Fauteuils électriques d\'intérieur
+                Résumé : Petit fauteuil électrique d\'intérieur, démontable et
+                transportable; il est intéressant par sa prise en charge
+                intégrale, son faible encombrement et sa transportabilité
+                (élément le plus lourd 17 kg).',
+                'association_id'=>3,'sub_category'=>1],
         ]);
     }
 }
