@@ -58,7 +58,7 @@
                                 <label for="referentForename" class="col-md-4 col-form-label text-md-right">Prénom du référent</label>
 
                                 <div class="col-md-6">
-                                    <input id="referentForename" type="text" class="form-control @error('NomAssociation') is-invalid @enderror" name="referentForename" required autocomplete="new-password">
+                                    <input id="referentForename" type="text" class="form-control @error('referentForename') is-invalid @enderror" name="referentForename" required autocomplete="new-password">
 
                                     @error('referentForename')
                                     <span class="invalid-feedback" role="alert">
@@ -103,6 +103,19 @@
                                 @enderror
                             </div>
                         </div>
+                            <div class="form-group row">
+                                <label for="forename" class="col-md-4 col-form-label text-md-right">Prénom</label>
+
+                                <div class="col-md-6">
+                                    <input id="forename" type="text" class="form-control @error('forename') is-invalid @enderror" name="forename" value="{{ old('forename') }}" required autocomplete="email" autofocus>
+
+                                    @error('forename')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">Addresse mail</label>
