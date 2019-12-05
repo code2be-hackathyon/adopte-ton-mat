@@ -13,7 +13,7 @@ class Sub_categoriesSeeder extends Seeder
     public function run()
     {
         DB::table('sub_categories')->insert([
-            ['label'=>'fauteul roulant','category_id'=>4],
+            ['label'=>'fauteuil roulant','category_id'=>4],
             ['label'=>'lit','category_id'=>2],
             ['label'=>'lève personne','category_id'=>3],
             ['label'=>'douche','category_id'=>5],

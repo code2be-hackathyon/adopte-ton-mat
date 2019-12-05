@@ -16,12 +16,13 @@
 
 @section('content')
 
-
-    @foreach($materiels as $materiel)
+    @forelse($materiels as $materiel)
 
 {{--        @if(\Illuminate\Support\Facades\DB::table('categories')->find(--}}
 {{--    \Illuminate\Support\Facades\DB::table('sub_categories')->find(--}}
 {{--        $materiel->sub_category_id)->category_id)->id == request('category'))@php($i = 0)--}}
+
+
         <section class="content">
             <div class="align-content-lg-center">
 
@@ -66,7 +67,12 @@
 {{--        @else--}}
 {{--           @php($i = 1)--}}
 {{--        @endif--}}
-    @endforeach
+
+    @empty
+        <div class="text-center"><p>Il n'y a pas de materiel disponible dans cette catégorie</p></div>
+    @endforelse
+
+
 {{--    @if($i == 1)--}}
 {{--        <div class="text-center"><p>Il n'y a pas de materiel disponible dans cette catégorie</p></div>--}}
 {{--    @endif--}}
