@@ -14,28 +14,14 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            ['email'=>'contact@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>'contact2@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>'contact3@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>'contact4@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>'contact5@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>'contact6@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>'contact7@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)],
-            ['email'=>Str::random(5).'@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85220','remember_token'=>random_int(0,200)]
+            ['email'=>'contact@test.fr','password'=>'pwtest','city'=>'La Roche sur Yon','street'=>'Boulevard Louis Blanc','num_street'=>'123','postal_code'=>'85000','remember_token'=>random_int(0,200)],
 
 
         ]);
+        for ($i = 2; $i <= 21; $i++) {
+            DB::table('users')->insert([
+                ['email' => Str::random(5) . '@test.fr', 'password' => 'pwtest', 'city' => 'La Roche sur Yon', 'street' => 'Boulevard Louis Blanc', 'num_street' => '123', 'postal_code' =>  random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9).'0', 'remember_token' => random_int(0, 200)]
+            ]);
+        }
     }
 }

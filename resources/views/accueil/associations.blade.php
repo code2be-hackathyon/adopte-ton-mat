@@ -30,7 +30,10 @@
                     <td>{{\Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->postal_code}}</td>
                     <td>{{$association->referent_forename.' '.$association->referent_name}}</td>
                     <td>{{$association->description}}</td>
-                    <td><a href="mailto:{{ \Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->email}}">{{ \Illuminate\Support\Facades\DB::table('users')->find($association['user_id'])->email}}</a></td>
+                    <td><a href="mailto:{{ \Illuminate\Support\Facades\DB::table('users')
+                    ->find($association['user_id'])->email}}">
+                            {{ \Illuminate\Support\Facades\DB::table('users')
+                    ->find($association['user_id'])->email}}</a></td>
                 </tr>
                     @endforeach
                 </tbody>

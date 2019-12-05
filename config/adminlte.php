@@ -75,7 +75,7 @@ return [
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
-    
+
     'classes_topnav_nav' => 'navbar-expand-md',
     'classes_topnav_container' => 'container',
 
@@ -174,19 +174,22 @@ return [
     */
 
     'menu' => [
-        
 
-        ['header' => ''],
         [
             'text' => 'Connexion',
             'icon_color' => 'green',
             'url'  => '/login',
+            'topnav' => true,
+            'right'=>true,
         ],
         [
             'text' => 'Inscription',
             'icon_color' => 'green',
             'url'  => '/register',
+            'topnav' => true,
         ],
+        ['header' => ''],
+
         [
             'text'       => 'Annuaire des associations',
             'icon_color' => 'red',
