@@ -30,4 +30,4 @@ jobs:
           cd /var/app/code
           docker-compose restart app
           docker-compose exec -T app php artisan migrate --force
-          chmod -R 777 storage
+          docker-compose exec -T app chmod -R 777 storage
