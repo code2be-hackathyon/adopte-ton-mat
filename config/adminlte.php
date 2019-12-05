@@ -184,7 +184,7 @@ return [
         ],
         [
             'text' => 'Inscription',
-            'icon_color' => 'green',
+            'icon_color' => 'blue',
             'url'  => '/register',
             'topnav' => true,
         ],
@@ -198,7 +198,7 @@ return [
         [
             'text'       => 'Proposer un équipement',
             'icon_color' => 'yellow',
-            'url'  => '/materiel'
+            'url'  => '/ajoutMateriel'
         ],
         [
             'text'    => 'Trouver mon Matériel',

@@ -15,7 +15,9 @@
 Route::get('/ficheAssociation', function () {
     return view('ficheAssociation');
 });
-
+Route::get('/ajoutMateriel', function () {
+    return view('materiel/ajoutMateriel');
+});
 Auth::routes();
 
 Route::get('/', 'CategorieController@index')->name('home');
