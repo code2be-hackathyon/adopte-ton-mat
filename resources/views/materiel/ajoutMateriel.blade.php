@@ -22,12 +22,12 @@
 
                           <p></p>
                             <div class="form-group row">
-                                <label for="NomAssociation" class="col-md-4 col-form-label text-md-right">Nom de l'équipement</label>
+                                <label for="label" class="col-md-4 col-form-label text-md-right">Nom de l'équipement</label>
 
                                 <div class="col-md-6">
-                                    <input id="NomAssociation" type="text" class="form-control @error('NomAssociation') is-invalid @enderror" name="NomAssociation" required autocomplete="new-password">
+                                    <input id="label" type="text" class="form-control @error('label') is-invalid @enderror" name="label" value="{{old('label')}}" required autocomplete="new-password">
 
-                                    @error('NomAssociation')
+                                    @error('label')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -38,12 +38,12 @@
 
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Réference de l'équipement</label>
+                            <label for="reference" class="col-md-4 col-form-label text-md-right">Réference de l'équipement</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="email" autofocus>
+                                <input id="reference" type="text" class="form-control @error('reference') is-invalid @enderror" name="reference" value="{{ old('reference') }}" required autocomplete="email" autofocus>
 
-                                @error('name')
+                                @error('reference')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -52,16 +52,16 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Catégorie de l'équipement</label>
+                            <label for="subCategory" class="col-md-4 col-form-label text-md-right">Catégorie de l'équipement</label>
 
                             <div class="col-md-6">
 {{--                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="email" autofocus>--}}
-                                <select>
+                                <select name="subCategory" class="form-control @error('subCategory') is-invalid @enderror" >
                                     @foreach(\App\Sub_category::all() as $sub_category)
-                                        <option value="{{$sub_category->id}}">{{$sub_category->label}}</option>
+                                        <option value="{{old('subCategory')}}{{$sub_category->id}}">{{$sub_category->label}}</option>
                                         @endforeach
                                 </select>
-                                @error('name')
+                                @error('subCategory')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
