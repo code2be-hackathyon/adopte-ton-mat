@@ -34,6 +34,22 @@
                                         </span>
                                     @enderror
                                 </div>
+
+                            </div>
+                            <p></p>
+                            <div class="form-group row">
+                                <label for="NomAssociation" class="col-md-4 col-form-label text-md-right">Nom de l'association</label>
+
+                                <div class="col-md-6">
+                                    <input id="NomAssociation" type="text" class="form-control @error('NomAssociation') is-invalid @enderror" name="NomAssociation" required autocomplete="new-password">
+
+                                    @error('NomAssociation')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
                             </div>
                         </div>
                         <div id="particulier" style="display: none;">
@@ -68,6 +84,22 @@
                                 @enderror
                             </div>
                         </div>
+
+                            <div class="form-group row">
+                                <label for="city" class="col-md-4 col-form-label text-md-right">Ville</label>
+
+                                <div class="col-md-6">
+                                    <input id="city" type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city">
+
+                                    @error('city')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">Mot de passe</label>
